@@ -27,6 +27,10 @@ module.exports = {
         test: /\.(scss|css)$/,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(jpg|png|mp4)$/,
+        use: 'file-loader?name=assets/[name].[ext]',
+      },
     ],
   },
   plugins: [

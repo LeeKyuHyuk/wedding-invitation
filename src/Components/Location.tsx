@@ -1,15 +1,21 @@
 import React from 'react';
 import { Divider } from 'antd';
 import styled from 'styled-components';
-import { LOCATION_IMAGE } from '../Images';
+import GroovePaper from '../Assets/GroovePaper.png';
+import LocationMap from '../Assets/LocationMap.png';
 
 const Wrapper = styled.div`
+  background: #efebe9;
+  background-image: url(${GroovePaper});
+  padding-left: 42px;
+  padding-right: 42px;
+  padding-bottom: 42px;
+  width: 100%;
   text-align: center;
-  margin-bottom: 42px;
 `;
 
 const Title = styled.p`
-  font-size: 1.7vh;
+  font-size: 2vh;
   font-weight: bold;
   opacity: 0.85;
   margin-bottom: 0;
@@ -23,10 +29,10 @@ const Image = styled.img`
 const Location = () => {
   return (
     <Wrapper>
-      <Divider plain>
+      <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
         <Title>오시는 길</Title>
       </Divider>
-      <Image src={LOCATION_IMAGE} />
+      <Image src={LocationMap} />
     </Wrapper>
   );
 };

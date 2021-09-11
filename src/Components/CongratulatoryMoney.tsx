@@ -17,14 +17,20 @@ import {
   BRIDE_MOTHER_NAME,
   BRIDE_MOTHER_ACCOUNT_NUMBER,
 } from '../Config';
+import GroovePaper from '../Assets/GroovePaper.png';
 
 const Wrapper = styled.div`
+  background: #efebe9;
+  background-image: url(${GroovePaper});
+  padding-left: 42px;
+  padding-right: 42px;
+  padding-bottom: 18px;
+  width: 100%;
   text-align: center;
-  margin-bottom: 42px;
 `;
 
 const Title = styled.p`
-  font-size: 1.7vh;
+  font-size: 2vh;
   font-weight: bold;
   opacity: 0.85;
   margin-bottom: 0;
@@ -37,8 +43,15 @@ const Content = styled.p`
   margin-bottom: 24px;
 `;
 
+const SubContent = styled.p`
+  font-size: 1.3vh;
+  line-height: 1.75;
+  opacity: 0.75;
+  margin-bottom: 24px;
+`;
+
 const Description = styled.p`
-  font-size: 1.2vh;
+  font-size: 1.75vh;
   line-height: 1.75;
   opacity: 0.65;
   margin-top: 8px;
@@ -58,19 +71,19 @@ const CongratulatoryMoney = () => {
 
   return (
     <Wrapper>
-      <Divider plain>
+      <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
         <Title>축하의 마음을 전하세요</Title>
       </Divider>
       <Content>축하의 마음을 담아 축의금을 전달해 보세요.</Content>
       <ContactButton onClick={() => setGroomVisible(true)}>
         <CheckCircleTwoTone style={{ fontSize: 64, marginBottom: 16 }} twoToneColor="#829fe0" />
         <br />
-        신랑측 계좌번호 확인
+        <SubContent>신랑측 계좌번호 확인</SubContent>
       </ContactButton>
       <ContactButton onClick={() => setBrideVisible(true)}>
         <CheckCircleTwoTone style={{ fontSize: 64, marginBottom: 16 }} twoToneColor="#fe7daf" />
         <br />
-        신부측 계좌번호 확인
+        <SubContent>신부측 계좌번호 확인</SubContent>
       </ContactButton>
       <Modal
         title={<b>신랑측 계좌번호</b>}

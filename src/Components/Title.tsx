@@ -1,11 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
 import { WEDDING_DATE, WEDDING_LOCATION, GROOM_NAME, BRIDE_NAME } from '../Config';
-import { WEDDING_INVITATION_MAIN_PHOTO } from '../Images';
+import BackgroundVidio from '../Assets/BackgroundVideo.mp4';
 
-const Wrapper = styled.div`
+const Layout = styled.div`
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0px auto;
+  position: relative;
+`;
+
+const TitleWrapper = styled.div`
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  margin-bottom: 42px;
+  text-shadow: -1px 0 #9e9e9e, 0 1px #9e9e9e, 1px 0 #9e9e9e, 0 -1px #9e9e9e;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s; /* Opera */
+`;
+
+const VideoBackground = styled.video`
+  background-color: #aeb8b3 !important;
+  opacity: 0.9;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
 `;
 
 const WeddingInvitation = styled.p`
@@ -27,25 +54,24 @@ const Schedule = styled.p`
   margin-bottom: 24px;
 `;
 
-const Image = styled.img`
-  width: 85%;
-  max-width: 1024px;
-`;
-
 const Title = () => {
   return (
-    <Wrapper>
-      <WeddingInvitation>WEDDING INVITATION</WeddingInvitation>
-      <GroomBride>
-        {GROOM_NAME} ♥ {BRIDE_NAME}
-      </GroomBride>
-      <Schedule>
-        {WEDDING_DATE}
-        <br />
-        {WEDDING_LOCATION}
-      </Schedule>
-      <Image src={WEDDING_INVITATION_MAIN_PHOTO} />
-    </Wrapper>
+    <Layout>
+      <VideoBackground autoPlay loop muted playsInline={true}>
+        <source src={BackgroundVidio} type="video/mp4" />
+      </VideoBackground>
+      <TitleWrapper>
+        <WeddingInvitation>WEDDING INVITATION</WeddingInvitation>
+        <GroomBride>
+          {GROOM_NAME} &#38; {BRIDE_NAME}
+        </GroomBride>
+        <Schedule>
+          {WEDDING_DATE}
+          <br />
+          {WEDDING_LOCATION}
+        </Schedule>
+      </TitleWrapper>
+    </Layout>
   );
 };
 

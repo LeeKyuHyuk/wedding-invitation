@@ -9,37 +9,46 @@ import {
   BRIDE_FATHER_NAME,
   BRIDE_MOTHER_NAME,
 } from '../Config';
+import GroovePaper from '../Assets/GroovePaper.png';
 
 const Wrapper = styled.div`
-  text-align: center;
-  margin-bottom: 42px;
+  background: #efebe9;
+  background-image: url(${GroovePaper});
+  padding-top: 42px;
+  padding-left: 42px;
+  padding-right: 42px;
+  width: 100%;
 `;
 
 const Title = styled.p`
-  font-size: 1.7vh;
+  font-size: 2vh;
   font-weight: bold;
   opacity: 0.85;
   margin-bottom: 0;
 `;
 
 const Content = styled.p`
-  font-size: 1.5vh;
+  font-size: 1.75vh;
   line-height: 1.75;
   opacity: 0.75;
   margin-bottom: 16px;
+  width: 100%;
+  text-align: center;
 `;
 
 const GroomBride = styled.p`
-  font-size: 1.5vh;
+  font-size: 1.75vh;
   line-height: 1.75;
   opacity: 0.85;
-  margin-bottom: 16px;
+  margin-bottom: 0px;
+  width: 100%;
+  text-align: center;
 `;
 
 const Gretting = () => {
   return (
     <Wrapper>
-      <Divider plain>
+      <Divider style={{ marginTop: 0, marginBottom: 32 }} plain>
         <Title>결혼합니다</Title>
       </Divider>
       <Content>
@@ -55,7 +64,7 @@ const Gretting = () => {
       <GroomBride>
         {GROOM_FATHER_NAME} · {GROOM_MOTHER_NAME}의 장남 {GROOM_NAME}
         <br />
-        {BRIDE_FATHER_NAME} · {BRIDE_MOTHER_NAME}의 장남 {BRIDE_NAME}
+        {BRIDE_FATHER_NAME} · {BRIDE_MOTHER_NAME}의 장녀 {BRIDE_NAME}
       </GroomBride>
     </Wrapper>
   );

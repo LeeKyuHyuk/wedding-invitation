@@ -2,21 +2,23 @@ import React from 'react';
 import ImageGallery from 'react-image-gallery';
 import { Divider } from 'antd';
 import styled from 'styled-components';
-import {
-  GALLERY_PHOTO_1,
-  GALLERY_PHOTO_2,
-  GALLERY_PHOTO_3,
-  GALLERY_PHOTO_4,
-  GALLERY_PHOTO_5,
-  GALLERY_PHOTO_6,
-} from '../Images';
+import GalleryPhoto1 from '../Assets/Gallery_Photo_1.png';
+import GalleryPhoto2 from '../Assets/Gallery_Photo_2.png';
+import GalleryPhoto3 from '../Assets/Gallery_Photo_3.png';
+import GalleryPhoto4 from '../Assets/Gallery_Photo_4.png';
+import GalleryPhoto5 from '../Assets/Gallery_Photo_5.png';
+import GalleryPhoto6 from '../Assets/Gallery_Photo_6.png';
+import GroovePaper from '../Assets/GroovePaper.png';
 
 const Wrapper = styled.div`
-  text-align: center;
+  background: #efebe9;
+  background-image: url(${GroovePaper});
+  padding: 42px;
+  width: 100%;
 `;
 
 const Title = styled.p`
-  font-size: 1.7vh;
+  font-size: 2vh;
   font-weight: bold;
   opacity: 0.85;
   margin-bottom: 0;
@@ -24,35 +26,35 @@ const Title = styled.p`
 
 const images = [
   {
-    original: GALLERY_PHOTO_1,
-    thumbnail: GALLERY_PHOTO_1,
+    original: GalleryPhoto1,
+    thumbnail: GalleryPhoto1,
   },
   {
-    original: GALLERY_PHOTO_2,
-    thumbnail: GALLERY_PHOTO_2,
+    original: GalleryPhoto2,
+    thumbnail: GalleryPhoto2,
   },
   {
-    original: GALLERY_PHOTO_3,
-    thumbnail: GALLERY_PHOTO_3,
+    original: GalleryPhoto3,
+    thumbnail: GalleryPhoto3,
   },
   {
-    original: GALLERY_PHOTO_4,
-    thumbnail: GALLERY_PHOTO_4,
+    original: GalleryPhoto4,
+    thumbnail: GalleryPhoto4,
   },
   {
-    original: GALLERY_PHOTO_5,
-    thumbnail: GALLERY_PHOTO_5,
+    original: GalleryPhoto5,
+    thumbnail: GalleryPhoto5,
   },
   {
-    original: GALLERY_PHOTO_6,
-    thumbnail: GALLERY_PHOTO_6,
+    original: GalleryPhoto6,
+    thumbnail: GalleryPhoto6,
   },
 ];
 
-const Gretting = () => {
+const Gallery = () => {
   return (
     <Wrapper>
-      <Divider plain style={{ marginBottom: 32 }}>
+      <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
         <Title>우리의 아름다운 순간</Title>
       </Divider>
       <ImageGallery showPlayButton={false} showFullscreenButton={false} items={images} />
@@ -60,4 +62,4 @@ const Gretting = () => {
   );
 };
 
-export default Gretting;
+export default Gallery;
