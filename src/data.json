@@ -1,0 +1,38 @@
+{
+  "date": "1970년 01월 01일, 목요일 오전 12시 00분",
+  "location": "○○○웨딩, ○층 ○○홀",
+  "gretting": "서로 마주 보며 다져온 사랑을\n이제 함께 한곳을 바라보며 걸어갈 수 있는\n큰 사랑으로 키우고자 합니다.\n저희 두 사람이 사랑의 이름으로 지켜나갈 수 있게\n앞날을 축복해 주시면 감사하겠습니다.",
+  "groom": {
+    "name": "○○○",
+    "account_number": "○○은행 ***-***-******",
+    "parents": {
+      "mother": {
+        "name": "○○○",
+        "account_number": "○○은행 ***-***-******"
+      },
+      "father": {
+        "name": "○○○",
+        "account_number": "○○은행 ***-***-******"
+      }
+    }
+  },
+  "bride": {
+    "name": "○○○",
+    "account_number": "○○은행 ***-***-******",
+    "parents": {
+      "mother": {
+        "name": "○○○",
+        "account_number": "○○은행 ***-***-******"
+      },
+      "father": {
+        "name": "○○○",
+        "account_number": "○○은행 ***-***-******"
+      }
+    }
+  },
+  "kakaotalk": {
+    "api_token": "",
+    "wedding_invitation_url": "",
+    "share_image": ""
+  }
+}
